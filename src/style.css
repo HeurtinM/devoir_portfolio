@@ -10,10 +10,20 @@ h1,h2,h3,h4,strong{
     font-weight: 600;
 }
 
-nav a{
+header nav a{
     color: blue;
+    text-decoration: none;
 }
   
-nav a.active{
+header nav a.active{
     color: purple;
+    text-decoration: underline;
+}
+
+header{
+
+}
+
+header a{
+    text-transform: uppercase;
 }

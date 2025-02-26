@@ -13,12 +13,14 @@ const App = () => {
     return(
       <div className="container">
         <header>
+          <div>John Doe</div>{/* je ne voit pas quel balise semantic mettre pour cette element, donc j'utilise simplement une div pour aider a la manipulation avec le CSS */}
+
           <nav>
-            <a href="/" className={location.pathname === '/' ? 'active' : ''}>Acceuil</a>
-            <a href="services" className={location.pathname === '/services' ? 'active' : ''} >Services</a>
-            <a href="projects" className={location.pathname === '/projects' ? 'active' : ''}>Réalisations</a>
-            <a href="contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</a>
-            <a href="legal_notice" className={location.pathname === '/legal_notice' ? 'active' : ''}>Mentions légals</a>
+            <a href="/" className={location.pathname === '/' ? 'active' : ''}>Acceuil </a>
+            <a href="services" className={location.pathname === '/services' ? 'active' : ''} >Services </a>
+            <a href="projects" className={location.pathname === '/projects' ? 'active' : ''}>Réalisations </a>
+            <a href="contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact </a>
+            <a href="legal_notice" className={location.pathname === '/legal_notice' ? 'active' : ''}>Mentions légals </a>
           </nav>
 
           <Routes>
@@ -33,7 +35,36 @@ const App = () => {
 
         </main>
         <footer>
-          
+          <section>
+            <h2>John Doe</h2>
+            <address>
+              40 rue Laure Diebold<br/>
+              69009 Lyon, France<br/>
+              10 20 30 40 50<br/>
+              <a href="mailto:">john.doe@gmail.com</a> {/*desactiver le underline et couleur en CSS*/}
+            </address>
+          </section>
+          <section>
+            <h2>Liens utiles</h2>
+            <nav>
+            <a href="/" className={location.pathname === '/' ? 'active' : ''}>Acceuil </a><br/>
+            <a href="services" className={location.pathname === '/services' ? 'active' : ''} >Services </a><br/>
+            <a href="projects" className={location.pathname === '/projects' ? 'active' : ''}>Réalisations </a><br/>
+            <a href="contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact </a><br/>
+            <a href="legal_notice" className={location.pathname === '/legal_notice' ? 'active' : ''}>Mentions légals </a> {/*desactiver le underline et couleur en CSS*/}
+          </nav>
+          </section>
+          <section>
+            <h2>mes dernières réalisations</h2>
+            <article>
+              <a href="">Fresh Food</a><br/>
+              <a href="">Restaurant Akira</a><br/>
+              <a href="">Espace bien-être</a><br/>
+              <a href="">SEO</a><br/>
+              <a href="">Création d'une API</a><br/>
+              <a href="">Maquette d'un site</a><br/> {/*desactiver le underline et couleur en CSS*/}
+            </article>
+          </section>
         </footer>
       </div>
     )
