@@ -18,7 +18,7 @@ const App = () => {
           <nav>
             <a href="/" className={location.pathname === '/' ? 'active' : ''}>Acceuil </a>
             <a href="services" className={location.pathname === '/services' ? 'active' : ''} >Services </a>
-            <a href="projects" className={location.pathname === '/projects' ? 'active' : ''}>Réalisations </a>
+            <a href="projects" className={location.pathname === '/projects' ? 'active' : ''}>Portfolio </a>
             <a href="contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact </a>
             <a href="legal_notice" className={location.pathname === '/legal_notice' ? 'active' : ''}>Mentions légals </a>
           </nav>
@@ -49,10 +49,15 @@ const App = () => {
             <nav>
             <a href="/" className={location.pathname === '/' ? 'active' : ''}>Acceuil </a><br/>
             <a href="services" className={location.pathname === '/services' ? 'active' : ''} >Services </a><br/>
-            <a href="projects" className={location.pathname === '/projects' ? 'active' : ''}>Réalisations </a><br/>
+            <a href="projects" className={location.pathname === '/projects' ? 'active' : ''}>Portfolio </a><br/>
             <a href="contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact </a><br/>
             <a href="legal_notice" className={location.pathname === '/legal_notice' ? 'active' : ''}>Mentions légals </a> {/*desactiver le underline et couleur en CSS*/}
           </nav>
+          <section>
+            <a href="https://www.linkedin.com/">Linkedin</a>
+            <a href="https://x.com/home?lang=en">Twitter</a>
+            <a href="https://github.com/">GitHub</a> {/*remplacer text par icones*/}
+          </section>
           </section>
           <section>
             <h2>mes dernières réalisations</h2>
@@ -69,6 +74,5 @@ const App = () => {
       </div>
     )
   }
-
 
 export default App;
