@@ -11,19 +11,15 @@ h1,h2,h3,h4,strong{
 }
 
 header nav a{
-    color: blue;
     text-decoration: none;
 }
   
 header nav a.active{
-    color: purple;
     text-decoration: underline;
-}
-
-header{
-
 }
 
 header a{
     text-transform: uppercase;
 }
+
+

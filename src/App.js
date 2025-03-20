@@ -11,28 +11,44 @@ const App = () => {
   const location = useLocation(); //le brief envoyait a https://api.reactrouter.com/v7/functions/react_router.NavLink.html pour la feature de changer le liens nav actif de couleur mais je ne me souvient pas avoir vue ça dans les cours et je n'ai pas réussi a bien comprendre, a la place j'utilise un hook pour determiner le "nav" actif et change son nom de class pour style.css
     
     return(
-      <div className="container">
+      <div className="container-fluid px-0">
         <header>
-          <div>John Doe</div>{/* je ne voit pas quel balise semantic mettre pour cette element, donc j'utilise simplement une div pour aider a la manipulation avec le CSS */}
-
-          <nav>
-            <a href="/" className={location.pathname === '/' ? 'active' : ''}>Acceuil </a>
-            <a href="services" className={location.pathname === '/services' ? 'active' : ''} >Services </a>
-            <a href="projects" className={location.pathname === '/projects' ? 'active' : ''}>Portfolio </a>
-            <a href="contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact </a>
-            <a href="legal_notice" className={location.pathname === '/legal_notice' ? 'active' : ''}>Mentions légals </a>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="/">John Doe</a> {/**renvoie a l'acceuil, un peu redondant mais simplifie grandement la replication de la maquette */}
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a href="/" className={"nav-link " + (location.pathname === '/' ? 'active' : '' )}>Acceuil</a> {/*j'ai besoin de 2 classnames une pour bootstrap et une pour changer le CSS si la page est celle active.*/}
+                  </li>
+                  <li class="nav-item">
+                    <a href="services" className={"nav-link " + (location.pathname === '/services' ? 'active' : '')} >Services </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="projects" className={"nav-link " + (location.pathname === '/projects' ? 'active' : '')}>Portfolio </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="contact" className={"nav-link " + (location.pathname === '/contact' ? 'active' : '')}>Contact </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="legal_notice" className={"nav-link " + (location.pathname === '/legal_notice' ? 'active' : '')}>Mentions légals </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </nav>
-
-          <Routes>
-            <Route path="/" element={<Home/>}></Route>
-            <Route path="services"  element={<Services/>}></Route>
-            <Route path="projects"  element={<Projects/>}></Route>
-            <Route path="contact"  element={<Contact/>}></Route>
-            <Route path="legal_notice"  element={<LegalNotice/>}></Route>
-          </Routes>
         </header>
         <main>
-
+          <Routes>
+              <Route path="/" element={<Home/>}></Route>
+              <Route path="services"  element={<Services/>}></Route>
+              <Route path="projects"  element={<Projects/>}></Route>
+              <Route path="contact"  element={<Contact/>}></Route>
+              <Route path="legal_notice"  element={<LegalNotice/>}></Route>
+            </Routes>
         </main>
         <footer>
           <section>
