@@ -22,4 +22,19 @@ header a{
     text-transform: uppercase;
 }
 
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.noWrap{
+    white-space: nowrap;
+}
+
+.icon{
+    color: #818181b0;
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
 

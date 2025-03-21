@@ -50,42 +50,45 @@ const App = () => {
               <Route path="legal_notice"  element={<LegalNotice/>}></Route>
             </Routes>
         </main>
-        <footer>
-          <section>
-            <h2>John Doe</h2>
-            <address>
-              40 rue Laure Diebold<br/>
-              69009 Lyon, France<br/>
-              10 20 30 40 50<br/>
-              <a href="mailto:">john.doe@gmail.com</a> {/*desactiver le underline et couleur en CSS*/}
-            </address>
-          </section>
-          <section>
-            <h2>Liens utiles</h2>
-            <nav>
-            <a href="/" className={location.pathname === '/' ? 'active' : ''}>Acceuil </a><br/>
-            <a href="services" className={location.pathname === '/services' ? 'active' : ''} >Services </a><br/>
-            <a href="projects" className={location.pathname === '/projects' ? 'active' : ''}>Portfolio </a><br/>
-            <a href="contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact </a><br/>
-            <a href="legal_notice" className={location.pathname === '/legal_notice' ? 'active' : ''}>Mentions légals </a> {/*desactiver le underline et couleur en CSS*/}
-          </nav>
-          <section>
-            <a href="https://www.linkedin.com/">Linkedin</a>
-            <a href="https://x.com/home?lang=en">Twitter</a>
-            <a href="https://github.com/">GitHub</a> {/*remplacer text par icones*/}
-          </section>
-          </section>
-          <section>
-            <h2>mes dernières réalisations</h2>
-            <article>
-              <a href="">Fresh Food</a><br/>
-              <a href="">Restaurant Akira</a><br/>
-              <a href="">Espace bien-être</a><br/>
-              <a href="">SEO</a><br/>
-              <a href="">Création d'une API</a><br/>
-              <a href="">Maquette d'un site</a><br/> {/*desactiver le underline et couleur en CSS*/}
-            </article>
-          </section>
+        <footer class="bg-dark text-white">
+          <div class="row w-75 mx-auto px-5">
+            <section class="col md4 mx-5 px-5 py-5">
+              <h2>John Doe</h2>
+              <address>
+                40 rue Laure Diebold<br/>
+                69009 Lyon, France<br/>
+                10 20 30 40 50<br/>
+                <a href="mailto:">john.doe@gmail.com</a>
+              </address>
+              <section >
+                  <a href="https://github.com/" className="icon"><i class="bi bi-github"></i></a>
+                  <a href="https://x.com/home?lang=en" className="icon"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.linkedin.com/" className="icon"><i class="bi bi-linkedin"></i></a>
+
+                </section>
+            </section>
+            <section class="col md4 mx-5 px-5 py-5">
+              <h2>Liens utiles</h2>
+              <nav>
+              <a href="/" className={location.pathname === '/' ? 'active' : ''}>Acceuil </a><br/>
+              <a href="services" className={location.pathname === '/services' ? 'active' : ''} >Services </a><br/>
+              <a href="projects" className={location.pathname === '/projects' ? 'active' : ''}>Portfolio </a><br/>
+              <a href="contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact </a><br/>
+              <a href="legal_notice" className={location.pathname === '/legal_notice' ? 'active' : ''}>Mentions légals </a>
+            </nav>
+            </section>
+            <section class="col md4 mx-5 px-5 py-5">
+              <h2 className="noWrap">mes dernières réalisations</h2>
+              <article>
+                <a href="">Fresh Food</a><br/>
+                <a href="">Restaurant Akira</a><br/>
+                <a href="">Espace bien-être</a><br/>
+                <a href="">SEO</a><br/>
+                <a href="">Création d'une API</a><br/>
+                <a href="">Maquette d'un site</a><br/>
+              </article>
+            </section>
+          </div>
         </footer>
       </div>
     )
