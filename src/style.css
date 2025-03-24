@@ -10,16 +10,16 @@ h1,h2,h3,h4,strong{
     font-weight: 600;
 }
 
+header a{
+    text-transform: uppercase;
+}
+
 header nav a{
     text-decoration: none;
 }
   
 header nav a.active{
     text-decoration: underline;
-}
-
-header a{
-    text-transform: uppercase;
 }
 
 footer a{
@@ -36,5 +36,15 @@ footer a{
     font-size: 2rem;
     margin-right: 0.5rem;
 }
+
+/* methode pour la background image pris ici: https://www.geeksforgeeks.org/how-to-set-background-images-in-reactjs/ */
+.bgImage {
+    background-image: url("../src/images/hero-bg.jpg");
+    background-size:cover;
+    height: 110vh;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 
