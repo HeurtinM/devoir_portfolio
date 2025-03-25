@@ -2,36 +2,6 @@ import JohnDoePic from "../images/john-doe-about.jpg"
 import React, { useEffect, useState } from 'react';
 
 const Home = () =>{
-
-    useEffect(()=>{
-
-        //tout est pris directement de https://www.w3schools.com/howto/howto_css_modals.asp
-     // Get the modal
-     var modal = document.getElementById("myModal");
-
-     // Get the button that opens the modal
-     var btn = document.getElementById("buttonForModal");
-
-     // Get the <span> element that closes the modal
-     var span = document.getElementsByClassName("close")[0];
-
-     // When the user clicks on the button, open the modal
-     btn.onclick = function() {
-      modal.style.display = "block";
-     }
-
-     // When the user clicks on <span> (x), close the modal
-     span.onclick = function() {
-      modal.style.display = "none";
-     }
-
-     // When the user clicks anywhere outside of the modal, close it
-     window.onclick = function(event) {
-     if (event.target === modal) {
-     modal.style.display = "none";
-     }
-     }
-    },[])
     
     const[user,SetUser] = useState([]);
 
@@ -42,7 +12,7 @@ const Home = () =>{
     }
 
 
-    useEffect(()=>{ //j'ai cru comprendre qu'il était preferable d'utiliser plusieurs hooks useEffect plutot que de mettre differente logiques dans un seul
+    useEffect(()=>{
         getUser();
     },[])
     return(
@@ -51,21 +21,48 @@ const Home = () =>{
             <section className="text-center">
                 <h1 className="display-1 fw-bold text-light">Bonjour, je suis John Doe</h1> 
                 <h2 className="display-3 fw-bold text-light">Développeur web full stack</h2>
-                <button id="buttonForModal" className="btn btn-danger">En savoir plus</button>
+                <button className="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#myModal">En savoir plus</button>
             </section>
-            <div id="myModal" className="modal">
-             <div class="modal-content">
-              <span class="close">&times;</span>
-              <section>
-                <img src={user.avatar_url} alt="image de profile de John Doe" /> {/* je ne decrit pas l'avatar dans l'alt car il pourrait changer*/}
-                {user.login}
-                {user.location}
-                {user.bio}
-                {user.public_repos}
-                {user.followers}
-                {user.following}
-              </section>
-             </div>
+            <div id="myModal" className="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered container-fluid modal-lg">
+                    <div className="modal-content bg-dark text-white">
+                        <div className="modal-header">
+                            <h3 className="modal-title fs-5 fw-bold" id="myModalLabel">Mon profile GitHub</h3>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body">
+                            <div className="row">
+                                <div className="col-sm-5 my-4 ms-4">
+                                    <img src={user.avatar_url} alt="avatar du profile de John Doe" className="img-fluid"/> {/* je ne decrit pas l'avatar dans l'alt car il pourrait changer*/}
+                                </div>
+                                <div className="col-sm-6 my-4"> 
+                                    <div class="border-bottom mb-2">
+                                        <p><i class="bi bi-person"></i> <a href={user.html_url}>{user.name}</a></p>
+                                    </div>
+                                    <div class="border-bottom mb-2">
+                                        <p><i class="bi bi-geo-alt"> </i>{user.location}</p>
+                                    </div>
+                                    <div class="border-bottom mb-2">
+                                        <p ><i class="bi bi-card-text"> </i>{user.bio}</p>
+                                    </div>
+                                    <div class="border-bottom mb-2">
+                                        <p ><i class="bi bi-box"></i> Repositories: {user.public_repos}</p>
+                                    </div>
+                                    <div class="border-bottom mb-2">
+                                        <p ><i class="bi bi-people"></i> Followers: {user.followers}</p>
+                                    </div>
+                                    <div>
+                                        <p ><i class="bi bi-people"></i> Following: {user.following}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
             </div>
          </div>
             <div className="container border shadow my-3">
