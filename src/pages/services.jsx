@@ -12,7 +12,7 @@ const Services = () =>{
             <div className="container text-center mb-5">
               <div className="row">
                 <div className="col-md-4">
-                  <div className="card h-100">  {/*adaptation de l'exemple donné ici: https://getbootstrap.com/docs/4.0/components/card/ */}
+                  <div className="card h-100">  
                     <i className="bi bi-brush fs-1 text-primary my-4"></i>
                     <div className="card-body">
                       <h3 className="card-title">UX Design</h3>
