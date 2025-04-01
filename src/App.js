@@ -11,7 +11,7 @@ const App = () => {
   const location = useLocation(); //le brief envoyait a https://api.reactrouter.com/v7/functions/react_router.NavLink.html pour la feature de changer le liens nav actif de couleur mais je ne me souvient pas avoir vue ça dans les cours et je n'ai pas réussi a bien comprendre, a la place j'utilise un hook pour determiner le "nav" actif et change son nom de class pour style.css
     
     return(
-      <div className="container-fluid px-0">
+      <div className="container-fluid px-0"> {/*tout les elements bootstrap dans ce projet sont pris directement de la documentation bootstraps https://getbootstrap.com/docs/5.3/getting-started/introduction/ puis adaptés */}
         <header>
           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -50,9 +50,9 @@ const App = () => {
               <Route path="legal_notice"  element={<LegalNotice/>}></Route>
             </Routes>
         </main>
-        <footer class="bg-dark text-white">
-          <div class="row w-75 mx-auto px-5">
-            <section class="col md4 mx-5 px-5 py-5">
+        <footer class="bg-dark text-white ">
+          <div class="row w-75 mx-auto px-auto">
+            <section class="col-12 col-md-4 px-md-5 py-5">
               <h2>John Doe</h2>
               <address>
                 40 rue Laure Diebold<br/>
@@ -67,7 +67,7 @@ const App = () => {
 
                 </section>
             </section>
-            <section class="col md4 mx-5 px-5 py-5">
+            <section class="col-12 col-md-4 px-md-5 py-5">
               <h2>Liens utiles</h2>
               <nav>
               <a href="/" className={location.pathname === '/' ? 'active' : ''}>Acceuil </a><br/>
@@ -77,7 +77,7 @@ const App = () => {
               <a href="legal_notice" className={location.pathname === '/legal_notice' ? 'active' : ''}>Mentions légals </a>
             </nav>
             </section>
-            <section class="col md4 mx-5 px-5 py-5">
+            <section class="col-12 col-md-4 px-md-5 py-5">
               <h2 className="noWrap">mes dernières réalisations</h2>
               <article>
                 <a href="">Fresh Food</a><br/>

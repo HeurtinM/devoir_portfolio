@@ -12,19 +12,19 @@ const Contact = () =>{
                         <form action="">
                             <h2 className="my-3 border-bottom border-primary mb-5 fw-bold">Formulaire de contact</h2>
                             <div class="form-group">
-                                <input type="text" placeholder="Votre nom" className="form-control my-2"/>
+                                <input type="text" placeholder="Votre nom" className="form-control my-2" required/>
                             </div>
                             <div class="form-group">
-                                <input type="text" placeholder="Votre adresse email" className="form-control my-2"/>
+                                <input type="email" placeholder="Votre adresse email" className="form-control my-2" required/>
                             </div>
                             <div class="form-group">
-                                <input type="text" placeholder="Votre numero de téléphone" className="form-control my-2"/>
+                                <input type="tel" placeholder="Votre numero de téléphone" className="form-control my-2" required/>
                             </div>
                             <div class="form-group">
-                                <input type="text" placeholder="Sujet" className="form-control my-2"/>                                
+                                <input type="text" placeholder="Sujet" className="form-control my-2" required/>                                
                             </div>
                             <div class="form-group">
-                                <textarea type="text" placeholder="Votre message" className="form-control my-2" rows={14}/>                                
+                                <textarea type="text" placeholder="Votre message" className="form-control my-2" rows={14} required/>                                
                             </div>
                             <div className="text-center mb-3">
                                 <button type="submit" className="btn btn-primary">Envoyer</button>

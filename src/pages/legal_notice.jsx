@@ -11,11 +11,11 @@ const LegalNotice = () =>{
               <h1 className="text-center fw-bold">Mentions légals</h1>
               <hr className="my-4"/>
             </div>
-            <section className="accordion w-75 mx-auto">
-                <div class="accordion" id="legalNoticeAccordion"> {/*HTML du menu accordéon pris de: https://getbootstrap.com/docs/5.3/components/accordion/ puis adapté */}
+            <section className="accordion w-75 mx-auto my-5">
+                <div class="accordion" id="legalNoticeAccordion">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                 Editeur du site
                             </button>
                         </h2>
@@ -64,7 +64,7 @@ const LegalNotice = () =>{
                     </div>
                 </div>
             </section>
-
+            <div className="min-vh-20"></div> {/*espace de remplissage pour que le footer reste en bas de la page meme si tout les menu accordéons sont fermé */}
         </div>
     )
 }
