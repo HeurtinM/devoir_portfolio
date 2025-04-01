@@ -35,6 +35,11 @@ footer a{
     color: white;
 }
 
+footer a:hover{
+    color: white;
+    font-weight: bold;
+}
+
 .card:hover{
     background: #efefef;
     box-shadow: 1px 1px 5px;
