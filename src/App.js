@@ -78,7 +78,7 @@ const App = () => {
             </nav>
             </section>
             <section class="col-12 col-md-4 px-md-5 py-5">
-              <h2 className="noWrap">mes dernières réalisations</h2>
+              <h2 className="noWrap">Mes dernières réalisations</h2>
               <article>
                 <a href="">Fresh Food</a><br/>
                 <a href="">Restaurant Akira</a><br/>

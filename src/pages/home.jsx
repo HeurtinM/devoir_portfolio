@@ -19,8 +19,8 @@ const Home = () =>{
         <div>
          <div className="bgImage container-fluid d-flex justify-content-center align-items-center">
             <section className="text-center">
-                <h1 className="display-1 fw-bold text-light">Bonjour, je suis John Doe</h1> 
-                <h2 className="display-3 fw-bold text-light">Développeur web full stack</h2>
+                <h1 className="display-1 my-4 fw-bold text-light">Bonjour, je suis John Doe</h1> 
+                <h2 className="display-3 my-4 fw-bold text-light">Développeur web full stack</h2>
                 <button className="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#myModal">En savoir plus</button>
             </section>
             <div id="myModal" className="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">

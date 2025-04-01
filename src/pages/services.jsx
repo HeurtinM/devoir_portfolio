@@ -9,9 +9,9 @@ const Services = () =>{
               <h2 className="text-center fs-6 text">Voici les prestations sur lesquelles je peux intervenir</h2>
               <hr className="my-4"/>
             </div>
-            <div className="container text-center mb-5">
+            <div className="container text-center mb-5 ">
               <div className="row">
-                <div className="col-md-4">
+                <div className="col-md-4 my-3">
                   <div className="card h-100">  
                     <i className="bi bi-brush fs-1 text-primary my-4"></i>
                     <div className="card-body">
@@ -21,7 +21,7 @@ const Services = () =>{
                     </div>
                   </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 my-3">
                   <div className="card h-100">
                     <i className="bi bi-code-slash fs-1 text-primary my-4"></i>
                     <div className="card-body">
@@ -30,7 +30,7 @@ const Services = () =>{
                     </div>
                   </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 my-3">
                   <div className="card h-100">
                    <i className="bi bi-search fs-1 text-primary my-4"></i>
                    <div className="card-body">
